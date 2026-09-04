@@ -26,3 +26,9 @@ val grade = when (score) {
     else -< "ס"
 }
 println("Grade kamu: $grade")
+
+// Tulis DI LUAR main()
+fun calculateStatus (score: Int) if (score > 75) "Lulus" else "Tidak Lulus"
+
+// Panggil DI DALAM main()
+println("Status: ${calculateStatus (score)}")
