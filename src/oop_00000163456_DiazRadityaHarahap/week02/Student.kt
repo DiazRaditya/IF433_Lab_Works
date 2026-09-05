@@ -29,3 +29,11 @@ constructor (name: String, nim: String): this(name, nim, major "Non-Matriculated
     println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan).")
 }
 
+class Student ( 1 Usage new
+                val name: String,
+                val nim: String,
+                var qpa: Double = 0.0, // <-- Default Argument
+                var major: String
+{
+
+}
