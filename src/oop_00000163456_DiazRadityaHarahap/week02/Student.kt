@@ -1,12 +1,12 @@
 package oop_00000163456_DiazRadityaHarahap.week02
 
-package oop_001_johnthor.week02
 class Student (new
                val name: String,
                val nim: String,
                var major: String
+               var qpa: Double = 0.0
 ){
-// Body class kosong dulu
+
 }
 
 class Student (val name: String, val nim: String, var major: String) { new
@@ -32,8 +32,9 @@ constructor (name: String, nim: String): this(name, nim, major "Non-Matriculated
 class Student ( 1 Usage new
                 val name: String,
                 val nim: String,
-                var qpa: Double = 0.0, // <-- Default Argument
                 var major: String
+                var qpa: Double = 0.0, // <-- Default Argument
+
 {
 
 }
