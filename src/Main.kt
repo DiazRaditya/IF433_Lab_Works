@@ -67,4 +67,67 @@ fun main() {
     println("Peminjam       : ${loan.borrower}")
     println("Lama Pinjam    : ${loan.loanDuration} hari")
     println("Total Denda    : Rp ${loan.calculateFine()}")
+
+
+}
+
+import java.util.Scanner
+import kotlin.random.Random
+
+fun main() {
+    val scanner = Scanner(System.`in`)
+
+    print("Masukkan nama Hero: ")
+    val heroName = scanner.nextLine()
+
+    print("Masukkan stat Damage Hero: ")
+    val heroDamage = scanner.nextInt()
+
+    val hero = Hero(heroName, heroDamage)
+    var enemyHp = 100
+
+    while (hero.isAlive() && enemyHp > 0) {
+        println("\n=== MENU ===")
+        println("1. Serang")
+        println("2. Kabur")
+        print("Pilih: ")
+
+        val choice = scanner.nextInt()
+
+        if (choice == 1) {
+            hero.attack("Enemy")
+            enemyHp -= hero.baseDamage
+
+            if (enemyHp < 0) {
+                enemyHp = 0
+            }
+
+            println("HP musuh tersisa: $enemyHp")
+
+            if (enemyHp > 0) {
+                val enemyDamage = (10..20).random()
+                println("Musuh membalas dengan damage $enemyDamage!")
+                hero.takeDamage(enemyDamage)
+
+                println("HP Hero tersisa: ${hero.hp}")
+            }
+        } else if (choice == 2) {
+            println("${hero.name} memilih kabur!")
+            break
+        } else {
+            println("Pilihan tidak valid!")
+        }
+    }
+
+    println("\n=== HASIL PERTANDINGAN ===")
+
+    if (hero.isAlive() && enemyHp <= 0) {
+        println("${hero.name} menang!")
+        println("HP Hero tersisa: ${hero.hp}")
+    } else if (!hero.isAlive()) {
+        println("Enemy menang!")
+        println("HP Hero tersisa: ${hero.hp}")
+    } else {
+        println("${hero.name} kabur dari pertarungan.")
+    }
 }
