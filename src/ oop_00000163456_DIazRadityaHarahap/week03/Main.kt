@@ -41,3 +41,38 @@ fun main() {
 
     // 3. Test Computed Property
     println("Pajak yang harus dibayar: ${e.tax}")
+
+
+    fun main() {
+
+        // TUGAS 1 - WEAPON
+        println("=== WEAPON ===")
+
+        val weapon = Weapon("Excalibur", 500)
+
+        println("Nama: ${weapon.name}")
+        println("Damage awal: ${weapon.damage}")
+        println("Tier: ${weapon.tier}")
+
+        weapon.damage = -50
+        println("Damage setelah -50: ${weapon.damage}")
+
+        weapon.damage = 9999
+        println("Damage setelah 9999: ${weapon.damage}")
+        println("Tier: ${weapon.tier}")
+
+
+        // TUGAS 2 - PLAYER
+        println("\n=== PLAYER ===")
+
+        val player = Player("Diaz")
+
+        println("Username: ${player.username}")
+        println("Level awal: ${player.level}")
+
+        player.addXp(50)
+        println("Level setelah tambah 50 XP: ${player.level}")
+
+        player.addXp(60)
+        println("Level setelah tambah 60 XP: ${player.level}")
+    }
