@@ -32,3 +32,23 @@ println("Luas Persegi Panjang: ${math.hitungLuas(10, 5)}")
 println("Luas Lingkaran: ${math.hitungLuas(7.0)}")
 
 println()
+
+
+println("=== PAYMENT SYSTEM ===")
+
+val eWallet = EWallet("Diaz", 50000.0)
+val creditCard = CreditCard("Diaz", 100000.0)
+
+val paymentMethods: List<PaymentMethod> = listOf(
+    eWallet,
+    creditCard
+)
+
+for (payment in paymentMethods) {
+
+    println("\nNama akun: ${payment.accountName}")
+
+    payment.processPayment(75000.0)
+
+    println()
+}
