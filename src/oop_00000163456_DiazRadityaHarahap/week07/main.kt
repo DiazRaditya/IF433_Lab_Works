@@ -67,3 +67,26 @@ val uiMessage = when (response) {
             println("Damage: ${starterWeapon.item.damage}")
             println("Rarity: ${starterWeapon.item.rarity}")
             println("Durability: ${starterWeapon.durability}")
+
+            println("\n=== TEST WEAPON UPGRADE ===")
+
+        val upgradedItem = starterWeapon.item.copy(damage = 25)
+
+    println("Senjata Asli: ${starterWeapon.item}")
+            println("Senjata Upgrade: $upgradedItem")
+
+            println("\n=== TEST BATTLE EVENTS ===")
+
+            processEvent(BattleState.SafeZone)
+
+            processEvent(
+            BattleState.MonsterEncounter("Goblin Nakal")
+            )
+
+            processEvent(
+            BattleState.LootDropped(upgradedItem)
+            )
+
+            processEvent(
+            BattleState.GameOver("Terkena jebakan racun")
+            )
