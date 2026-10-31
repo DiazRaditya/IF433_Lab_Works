@@ -50,5 +50,9 @@ val uiMessage = when (response) {
 
     println(uiMessage)
 
+            println("\n=== TEST GAME MANAGER ===")
+
+            GameManager.startGame()
+            GameManager.startGame()
 
 
