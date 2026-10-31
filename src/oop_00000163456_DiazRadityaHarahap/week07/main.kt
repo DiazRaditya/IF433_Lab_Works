@@ -55,4 +55,15 @@ val uiMessage = when (response) {
             GameManager.startGame()
             GameManager.startGame()
 
+            println("\n=== TEST ITEM RARITY ===")
 
+            println("Legendary Drop Chance: ${ItemRarity.LEGENDARY.dropChance}%")
+
+            println("\n=== TEST WEAPON FACTORY ===")
+
+        val starterWeapon = Weapon.forgeStarterSword()
+
+    println("Nama Senjata: ${starterWeapon.item.name}")
+            println("Damage: ${starterWeapon.item.damage}")
+            println("Rarity: ${starterWeapon.item.rarity}")
+            println("Durability: ${starterWeapon.durability}")
