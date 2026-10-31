@@ -13,3 +13,10 @@ fun main() {
     car.accelerate()
     car.openTrunk()
 }
+
+val electricCar = ElectricCar("Tesla", 4, 100)
+
+println("\n=== ELECTRIC CAR ===")
+electricCar.accelerate()
+electricCar.honk()
+electricCar.openTrunk()
