@@ -1,4 +1,4 @@
-package ` oop_00000163456_DIazRadityaHarahap`.week03
+package oop_00000163456_DiazRadityaHarahap.week03
 class Employee (val name: String)
 {
 
