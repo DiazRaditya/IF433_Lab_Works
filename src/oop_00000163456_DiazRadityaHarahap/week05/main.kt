@@ -52,3 +52,13 @@ for (payment in paymentMethods) {
 
     println()
 }
+
+
+if (payment is EWallet) {
+
+    println("Melakukan top up...")
+    payment.topUp(50000.0)
+
+    println("Mencoba pembayaran kembali...")
+    payment.processPayment(75000.0)
+}
