@@ -36,3 +36,9 @@ val losingTrades = closedTrades.filter {
 
 println("Losing Trades: $losingTrades")
 
+
+val losingTrades = closedTrades.filter {
+    it.roe <= 0
+}
+
+println("Losing Trades: $losingTrades")
