@@ -131,3 +131,9 @@ fun main() {
         println("${hero.name} kabur dari pertarungan.")
     }
 }
+
+
+
+val nullableMessage: String? = null
+
+println(nullableMessage!!)
