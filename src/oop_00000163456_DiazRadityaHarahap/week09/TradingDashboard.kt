@@ -62,3 +62,11 @@ val worstPerformersString = losingTrades
 println(worstPerformersString)
 
 
+
+println("=== CRYPTO TRADING DASHBOARD ===")
+
+topPerformersString.forEach {
+    println(it)
+}
+
+
