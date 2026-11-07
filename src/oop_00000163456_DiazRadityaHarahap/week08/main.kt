@@ -12,3 +12,8 @@ fun main() {
     println("City: $city")
 }
 
+
+order.customer?.address?.city?.let {
+    println("Customer City: $it")
+}
+
