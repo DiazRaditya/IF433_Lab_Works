@@ -34,3 +34,10 @@ for (item in mixedData) {
         println("String: $text")
     }
 }
+
+
+val number: Any = "Not a Number"
+
+val result = number as? Int ?: 0
+
+println("Result: $result")
