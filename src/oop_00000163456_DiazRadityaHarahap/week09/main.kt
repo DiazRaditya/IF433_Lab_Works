@@ -14,3 +14,12 @@ val studentScores = mapOf(
 
 println("Student Scores: $studentScores")
 println("Diaz Score: ${studentScores["Diaz"]}")
+
+
+
+val result = students
+    .filter { it.score >= 80 }
+    .sortedBy { it.name }
+    .map { "${it.name}: ${it.score}" }
+
+println(result)
