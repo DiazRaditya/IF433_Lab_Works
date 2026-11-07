@@ -1,6 +1,9 @@
-package oop_00000163456_DiazRadityaHarahap.week09
+
+package oop_NIM_NAMA.week09
 
 fun main() {
+
+    // Checkpoint 11: Data Trading
     val tradeHistory = listOf(
         TradeLog("BTCUSDT", "LONG", 20, 15.5, "CLOSED"),
         TradeLog("ETHUSDT", "SHORT", 10, -5.2, "CLOSED"),
@@ -12,71 +15,55 @@ fun main() {
         TradeLog("SOLUSDT", "SHORT", 5, -3.8, "CLOSED")
     )
 
-    println(tradeHistory)
-}
-
-
-val closedTrades = tradeHistory.filter {
-    it.status == "CLOSED"
-}
-
-println("Closed Trades: $closedTrades")
-
-
-val winningTrades = closedTrades.filter {
-    it.roe > 0
-}
-
-println("Winning Trades: $winningTrades")
-
-
-val losingTrades = closedTrades.filter {
-    it.roe <= 0
-}
-
-println("Losing Trades: $losingTrades")
-
-
-val losingTrades = closedTrades.filter {
-    it.roe <= 0
-}
-
-println("Losing Trades: $losingTrades")
-
-
-val topPerformersString = winningTrades
-    .sortedByDescending { it.roe }
-    .map {
-        "WIN [${it.pair} - ${it.position}]: +${it.roe}% ROE (Lev: ${it.leverage}x)"
+    // Checkpoint 12: Closed Trades
+    val closedTrades = tradeHistory.filter {
+        it.status == "CLOSED"
     }
 
-println(topPerformersString)
-
-
-val worstPerformersString = losingTrades
-    .sortedBy { it.roe }
-    .map {
-        "LOSS [${it.pair} - ${it.position}]: ${it.roe}% ROE (Lev: ${it.leverage}x)"
+    // Checkpoint 13: Winning Trades
+    val winningTrades = closedTrades.filter {
+        it.roe > 0
     }
 
-println(worstPerformersString)
+    // Checkpoint 14: Losing Trades
+    val losingTrades = closedTrades.filter {
+        it.roe <= 0
+    }
 
+    // Checkpoint 15: Top Performers
+    val topPerformersString = winningTrades
+        .sortedByDescending { it.roe }
+        .map {
+            "WIN [${it.pair} - ${it.position}]: +${it.roe}% ROE (Lev: ${it.leverage}x)"
+        }
 
+    // Checkpoint 16: Worst Performers
+    val worstPerformersString = losingTrades
+        .sortedBy { it.roe }
+        .map {
+            "LOSS [${it.pair} - ${it.position}]: ${it.roe}% ROE (Lev: ${it.leverage}x)"
+        }
 
-println("=== CRYPTO TRADING DASHBOARD ===")
+    // Checkpoint 17: Unique Pairs
+    val uniquePairs = tradeHistory
+        .map { it.pair }
+        .toSet()
 
-topPerformersString.forEach {
-    println(it)
+    // Checkpoint 18: Dashboard
+    println("=== CRYPTO TRADING DASHBOARD ===")
+    println("=== TOP PERFORMERS ===")
+
+    topPerformersString.forEach {
+        println(it)
+    }
+
+    // Checkpoint 19: Worst Performers
+    println("=== WORST PERFORMERS ===")
+
+    worstPerformersString.forEach {
+        println(it)
+    }
+
+    println("=== UNIQUE TRADING PAIRS ===")
+    println(uniquePairs)
 }
-
-
-println("=== WORST PERFORMERS ===")
-
-worstPerformersString.forEach {
-    println(it)
-}
-
-println("=== UNIQUE TRADING PAIRS ===")
-println(uniquePairs)
-
-
