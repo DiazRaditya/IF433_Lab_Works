@@ -14,3 +14,11 @@ fun main() {
 val squaredNumbers = numbers.map { it * it }
 
 println("Squared Numbers: $squaredNumbers")
+
+
+
+val sortedNumbers = numbers.sortedByDescending { it }
+
+sortedNumbers.forEach {
+    println(it)
+}
