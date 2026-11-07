@@ -26,3 +26,11 @@ val mixedData: List<Any> = listOf(
     200,
     "Python"
 )
+
+for (item in mixedData) {
+    val text = item as? String
+
+    if (text != null) {
+        println("String: $text")
+    }
+}
