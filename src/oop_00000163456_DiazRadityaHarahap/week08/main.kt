@@ -41,3 +41,9 @@ val number: Any = "Not a Number"
 val result = number as? Int ?: 0
 
 println("Result: $result")
+
+
+
+val javaName = LegacyJavaAPI.getUserName()!!
+
+println("Java User: $javaName")
