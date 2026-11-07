@@ -21,3 +21,11 @@ val closedTrades = tradeHistory.filter {
 }
 
 println("Closed Trades: $closedTrades")
+
+
+val winningTrades = closedTrades.filter {
+    it.roe > 0
+}
+
+println("Winning Trades: $winningTrades")
+
