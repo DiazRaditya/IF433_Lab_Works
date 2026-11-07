@@ -9,3 +9,8 @@ fun main() {
 
     println("Even Numbers: $evenNumbers")
 }
+
+
+val squaredNumbers = numbers.map { it * it }
+
+println("Squared Numbers: $squaredNumbers")
