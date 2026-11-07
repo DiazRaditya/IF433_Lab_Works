@@ -17,3 +17,12 @@ order.customer?.address?.city?.let {
     println("Customer City: $it")
 }
 
+
+val mixedData: List<Any> = listOf(
+    "Kotlin",
+    100,
+    "Java",
+    true,
+    200,
+    "Python"
+)
