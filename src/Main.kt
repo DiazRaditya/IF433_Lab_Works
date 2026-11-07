@@ -133,7 +133,10 @@ fun main() {
 }
 
 
-
 val nullableMessage: String? = null
 
-println(nullableMessage!!)
+val message = requireNotNull(nullableMessage) {
+    "Message cannot be null!"
+}
+
+println(message)
