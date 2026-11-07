@@ -70,3 +70,13 @@ topPerformersString.forEach {
 }
 
 
+println("=== WORST PERFORMERS ===")
+
+worstPerformersString.forEach {
+    println(it)
+}
+
+println("=== UNIQUE TRADING PAIRS ===")
+println(uniquePairs)
+
+
