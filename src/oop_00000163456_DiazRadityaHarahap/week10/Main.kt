@@ -11,3 +11,9 @@ fun main() {
     println("String Box: ${stringBox.getValue()}")
 
 }
+
+
+val pairBox = PairBox("Student ID", 12345)
+
+pairBox.display()
+
