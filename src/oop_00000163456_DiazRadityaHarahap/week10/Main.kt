@@ -37,3 +37,13 @@ numericStorage.display()
 println("Maximum Number: ${findMax(10, 20)}")
 println("Maximum String: ${findMax("Apple", "Banana")}")
 
+
+
+coinRepo.add(Coin("BTC", 0.5))
+coinRepo.add(Coin("ETH", 2.0))
+coinRepo.add(Coin("USDT", 1000.0))
+
+println(coinRepo.getAll())
+
+
+
