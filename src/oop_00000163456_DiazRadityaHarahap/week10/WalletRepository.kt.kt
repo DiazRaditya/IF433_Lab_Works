@@ -1,7 +1,7 @@
 package oop_00000163456_DiazRadityaHarahap.week10
 
 
-class WalletRepository<T : Any> {
+class `WalletRepository.kt`<T : Any> {
 
     private val items = mutableListOf<T>()
 
@@ -13,3 +13,10 @@ class WalletRepository<T : Any> {
         return items.toList()
     }
 }
+
+
+
+fun search(predicate: (T) -> Boolean): List<T> {
+    return items.filter(predicate)
+}
+
