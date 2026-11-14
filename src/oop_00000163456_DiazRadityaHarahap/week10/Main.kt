@@ -17,3 +17,14 @@ val pairBox = PairBox("Student ID", 12345)
 
 pairBox.display()
 
+
+
+printData(3.14)
+printData("Kotlin Generic")
+
+val doubleResult = getData(99.9)
+val stringResult = getData("Hello Generic")
+
+println("Double Result: $doubleResult")
+println("String Result: $stringResult")
+
