@@ -62,6 +62,19 @@ response.data.forEach { coin ->
 }
 
 
+val txRepo = WalletRepository<Transaction>()
+
+txRepo.add(Transaction("TX001", 100.0))
+txRepo.add(Transaction("TX002", 250.0))
+txRepo.add(Transaction("TX003", 500.0))
+
+println("=== TRANSACTION HISTORY ===")
+
+txRepo.getAll().forEach { transaction ->
+    println("ID: ${transaction.id}")
+    println("Amount: ${transaction.amount}")
+}
+
 
 
 
