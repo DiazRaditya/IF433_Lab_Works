@@ -28,3 +28,12 @@ val stringResult = getData("Hello Generic")
 println("Double Result: $doubleResult")
 println("String Result: $stringResult")
 
+
+
+val numericStorage = NumericalStorage(50)
+
+numericStorage.display()
+
+println("Maximum Number: ${findMax(10, 20)}")
+println("Maximum String: ${findMax("Apple", "Banana")}")
+
